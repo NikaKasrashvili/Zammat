@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Zammat | Excellence in Law</title>
     <link rel="stylesheet" href="zammat.css" />
+    <!-- JavaScript -->
+    <script src="translations.js"></script>
   </head>
+
   <body>
     <!-- Header -->
     <header>
@@ -15,12 +18,29 @@
             <a href="#hero">ZAMMAT<span>Legal</span></a>
           </div>
           <ul class="nav-links">
-            <li><a href="#hero" class="active">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#staff">Our Team</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li>
+              <a href="#hero" class="active" data-i18n="nav_home">Home</a>
+            </li>
+            <li><a href="#about" data-i18n="nav_about">About</a></li>
+            <li><a href="#services" data-i18n="nav_services">Services</a></li>
+            <li><a href="#staff" data-i18n="nav_team">Our Team</a></li>
+            <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
           </ul>
+          <div class="language-selector">
+            <button class="lang-btn" data-lang="en">
+              <img src="assets/flags/en.svg" alt="English" class="flag-icon" />
+            </button>
+            <button class="lang-btn" data-lang="ka">
+              <img
+                src="assets/flags/geo.svg"
+                alt="Georgian"
+                class="flag-icon"
+              />
+            </button>
+            <button class="lang-btn" data-lang="ru">
+              <img src="assets/flags/ru.svg" alt="Russian" class="flag-icon" />
+            </button>
+          </div>
         </nav>
       </div>
     </header>
@@ -29,13 +49,15 @@
     <section id="hero">
       <div class="container">
         <div class="hero-content">
-          <h1>Excellence in Legal Representation</h1>
-          <p>
+          <h1 data-i18n="hero_title">Full-Scale Legal Representation</h1>
+          <p data-i18n="hero_subtitle">
             Our team of experienced and young professionals provides
             high-quality legal services in criminal, civil, and administrative
             law in multiple languages throughout Georgia.
           </p>
-          <a href="#contact" class="btn">Book Consultation</a>
+          <a href="#contact" class="btn" data-i18n="hero_button"
+            >Book Consultation</a
+          >
         </div>
       </div>
     </section>
@@ -43,11 +65,11 @@
     <!-- About Section -->
     <section id="about">
       <div class="container">
-        <h2 class="section-title">About Us</h2>
+        <h2 class="section-title" data-i18n="about_title">About Us</h2>
         <div class="about-content">
           <div class="about-text">
-            <h3>A Legacy of Excellence</h3>
-            <p>
+            <h3 data-i18n="about_heading">A Legacy of Excellence</h3>
+            <p data-i18n="about_p1">
               ZAMAT Law Office is a results-oriented growing legal company,
               which offers both individuals and organizations full-scale legal
               services in the field of criminal, civil and administrative law in
@@ -55,17 +77,19 @@
               company is a legal company that unites both experienced and young
               lawyers and advocates.
             </p>
-            <p>
+            <p data-i18n="about_p2">
               Our team provides high-quality legal services to clients. Our main
               motto is reliability and tireless striving to achieve the set
               goals.
             </p>
-            <p>
+            <p data-i18n="about_p3">
               We are deeply confident in the professionalism of our team and are
               ready to represent the interests of each of our clients throughout
               Georgia.
             </p>
-            <a href="#contact" class="btn">Learn More</a>
+            <a href="#contact" class="btn" data-i18n="about_button"
+              >Learn More</a
+            >
           </div>
           <div class="about-img">
             <img src="Images/rome.jpg" alt="JusticeLegal Office" />
@@ -77,7 +101,7 @@
     <!-- Services Section -->
     <section id="services">
       <div class="container">
-        <h2 class="section-title">Our Services</h2>
+        <h2 class="section-title" data-i18n="services_title">Our Services</h2>
         <div class="services-grid">
           <div class="service-card">
             <div class="service-icon">
@@ -88,8 +112,8 @@
               />
             </div>
             <div class="service-content">
-              <h3>Criminal law</h3>
-              <p>
+              <h3 data-i18n="service_criminal_title">Criminal law</h3>
+              <p data-i18n="service_criminal_desc">
                 Criminal law addresses crimes and legal defenses for those
                 accused of wrongdoing. It covers everything from minor offenses
                 to serious crimes, with severe consequences for convictions.
@@ -105,8 +129,8 @@
               />
             </div>
             <div class="service-content">
-              <h3>Business law</h3>
-              <p>
+              <h3 data-i18n="service_business_title">Business law</h3>
+              <p data-i18n="service_business_desc">
                 Business Law encompasses legal regulations and rules that govern
                 business operations. It includes areas such as contracts,
                 employment law, intellectual property, mergers and acquisitions,
@@ -124,8 +148,8 @@
               />
             </div>
             <div class="service-content">
-              <h3>Civil law</h3>
-              <p>
+              <h3 data-i18n="service_civil_title">Civil law</h3>
+              <p data-i18n="service_civil_desc">
                 Civil Law deals with disputes between individuals or
                 organizations, typically involving issues like contracts,
                 property, family law, and torts (personal injury or negligence).
@@ -141,8 +165,8 @@
               />
             </div>
             <div class="service-content">
-              <h3>Animal Law</h3>
-              <p>
+              <h3 data-i18n="service_animal_title">Animal Law</h3>
+              <p data-i18n="service_animal_desc">
                 Animal Law covers legal issues related to the protection and
                 welfare of animals.
               </p>
@@ -157,8 +181,8 @@
               />
             </div>
             <div class="service-content">
-              <h3>Computer Law</h3>
-              <p>
+              <h3 data-i18n="service_cyber_title">Computer Law</h3>
+              <p data-i18n="service_cyber_desc">
                 Computer Law focuses on legal issues related to technology,
                 including cybersecurity, data privacy, intellectual property,
                 software licensing, and internet regulations.
@@ -174,10 +198,10 @@
               />
             </div>
             <div class="service-content">
-              <h3>Constitutional law</h3>
-              <p>
+              <h3 data-i18n="service_const_title">Constitutional law</h3>
+              <p data-i18n="service_const_desc">
                 Constitutional law focuses on interpreting and enforcing the
-                principles set out in a country’s constitution. It covers
+                principles set out in a country's constitution. It covers
                 individual rights, the separation of powers, and government
                 authority.
               </p>
@@ -192,8 +216,8 @@
               />
             </div>
             <div class="service-content">
-              <h3>Extradition law</h3>
-              <p>
+              <h3 data-i18n="service_extradition_title">Extradition law</h3>
+              <p data-i18n="service_extradition_desc">
                 Extradition law governs the process by which one country
                 requests the transfer of a person to face criminal charges or
                 serve a sentence in another country.
@@ -204,13 +228,13 @@
             <div class="service-icon">
               <img
                 src="assets/worker-svgrepo-com.svg"
-                alt="Criminal Law"
+                alt="Labour Law"
                 class="custom-svg-icon"
               />
             </div>
             <div class="service-content">
-              <h3>Labour law</h3>
-              <p>
+              <h3 data-i18n="service_labour_title">Labour law</h3>
+              <p data-i18n="service_labour_desc">
                 Labour law ensures fair treatment in the workplace, covering
                 issues like wages, discrimination, working conditions, and
                 wrongful termination. It protects employees' rights and outlines
@@ -227,8 +251,8 @@
               />
             </div>
             <div class="service-content">
-              <h3>Natural resources law</h3>
-              <p>
+              <h3 data-i18n="service_nature_title">Natural resources law</h3>
+              <p data-i18n="service_nature_desc">
                 Natural resources law governs the use and conservation of
                 natural assets like water, minerals, forests, and energy
                 sources. It involves regulations on environmental protection,
@@ -239,14 +263,32 @@
           <div class="service-card">
             <div class="service-icon">
               <img
-                src="assets/reshot-icon-oceans-E7Q6JK5Z24.svg"
-                alt="Criminal Law"
+                src="assets/reshot-icon-medical-examination-7Y236VS9LX.svg"
+                alt="Health Law"
                 class="custom-svg-icon"
               />
             </div>
             <div class="service-content">
-              <h3>Law of the Sea</h3>
-              <p>
+              <h3 data-i18n="service_health_title">Health law</h3>
+              <p data-i18n="service_health_desc">
+                Health law encompasses the regulations and legal principles that
+                govern healthcare services, medical practice, and patient
+                rights. It includes areas like medical malpractice, health
+                insurance, and patient privacy.
+              </p>
+            </div>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <img
+                src="assets/reshot-icon-oceans-E7Q6JK5Z24.svg"
+                alt="Law of the Sea"
+                class="custom-svg-icon"
+              />
+            </div>
+            <div class="service-content">
+              <h3 data-i18n="service_sea_title">Law of the Sea</h3>
+              <p data-i18n="service_sea_desc">
                 The Law of the Sea regulates the rights and responsibilities of
                 nations concerning the world's oceans. It covers areas like
                 territorial waters, exclusive economic zones, and marine
@@ -258,13 +300,13 @@
             <div class="service-icon">
               <img
                 src="assets/reshot-icon-tennis-player-T42E8JLPBU.svg"
-                alt="Criminal Law"
+                alt="Sports Law"
                 class="custom-svg-icon"
               />
             </div>
             <div class="service-content">
-              <h3>Sports law</h3>
-              <p>
+              <h3 data-i18n="service_sport_title">Sports law</h3>
+              <p data-i18n="service_sport_desc">
                 Sports law covers legal issues related to sports and athletes,
                 including contracts, doping, intellectual property, and dispute
                 resolution. It also governs the rights of players, teams, and
@@ -276,13 +318,13 @@
             <div class="service-icon">
               <img
                 src="assets/reshot-icon-tax-A4K2NCG5ZD.svg"
-                alt="Criminal Law"
+                alt="Tax Law"
                 class="custom-svg-icon"
               />
             </div>
             <div class="service-content">
-              <h3>Tax law</h3>
-              <p>
+              <h3 data-i18n="service_tax_title">Tax law</h3>
+              <p data-i18n="service_tax_desc">
                 Tax law governs how individuals and businesses are taxed,
                 including income, property, and sales taxes. It involves
                 regulations on tax compliance, deductions, and disputes with tax
@@ -297,31 +339,26 @@
     <!-- Staff Section -->
     <section id="staff">
       <div class="container">
-        <h2 class="section-title">Our Team</h2>
+        <h2 class="section-title" data-i18n="team_title">Our Team</h2>
         <div class="team-member">
           <div class="member-image">
             <img src="Images/sosiko.jpeg" alt="Soso Nibchviani" />
           </div>
           <div class="member-content">
-            <h3>Soso Nibchviani</h3>
-            <p class="position">Company founder</p>
-            <p class="bio">
+            <h3 data-i18n="founder_name">Soso Nibchviani</h3>
+            <p class="position" data-i18n="founder_position">Company founder</p>
+            <p class="bio" data-i18n="founder_bio">
               Soso Nibchviani, the founder of the legal company ZAMAT, works in
               various fields of law. Its main areas are: criminal law, corporate
               law, tax law. Soso Nibchviani worked in both public and private
               institutions in recent years. He has many years of work
-              experience.
-            </p>
-            <p class="bio">
-              Soso Nibchviani successfully graduated from the Faculty of Law of
-              the University of Georgia in 2015, and in 2019 he was awarded the
-              degree of Master of Laws in the field of law.Currently, Soso
-              Nibchviani is a doctoral student at Sulkhan-Saba Orbeliani
-              University School of Law.
-            </p>
-            <p class="bio">
-              Soso Nibchviani is a member of the Georgian Bar Association,
-              specializing in criminal law (list no: 10749).
+              experience. Soso Nibchviani successfully graduated from the
+              Faculty of Law of the University of Georgia in 2015, and in 2019
+              he was awarded the degree of Master of Laws in the field of
+              law.Currently, Soso Nibchviani is a doctoral student at
+              Sulkhan-Saba Orbeliani University School of Law. Soso Nibchviani
+              is a member of the Georgian Bar Association, specializing in
+              criminal law (list no: 10749).
             </p>
             <div class="social-links">
               <a href="#"><i>in</i></a>
@@ -336,26 +373,28 @@
     <!-- Contact Section -->
     <section id="contact">
       <div class="container">
-        <h2 class="section-title">Contact Us</h2>
+        <h2 class="section-title" data-i18n="contact_title">Contact Us</h2>
         <div class="contact-wrapper">
           <div class="contact-info">
-            <h3>Get In Touch</h3>
+            <h3 data-i18n="contact_heading">Get In Touch</h3>
             <div class="contact-details">
               <div>
                 <i>📍</i>
-                <p>123 Legal Avenue, Suite 500<br />Metropolis, NY 10001</p>
+                <p data-i18n="contact_address">
+                  123 Legal Avenue, Suite 500<br />Tbilisi, Georgia
+                </p>
               </div>
               <div>
                 <i>📞</i>
-                <p>+995 (555) 264 497</p>
+                <p data-i18n="contact_phone">+995 555 12 34 56</p>
               </div>
               <div>
                 <i>✉️</i>
-                <p>info@justicelegal.com</p>
+                <p data-i18n="contact_email">info@zamatlaw.com</p>
               </div>
               <div>
                 <i>⏰</i>
-                <p>
+                <p data-i18n="contact_hours">
                   Monday-Friday: 9:00 AM - 6:00 PM<br />Saturday: 10:00 AM -
                   2:00 PM
                 </p>
@@ -366,7 +405,7 @@
             <form action="#" method="POST">
               <div class="form-group inline">
                 <div class="form-control">
-                  <label for="name">Full Name</label>
+                  <label for="name" data-i18n="form_name">Full Name</label>
                   <input
                     type="text"
                     id="name"
@@ -376,7 +415,7 @@
                   />
                 </div>
                 <div class="form-control">
-                  <label for="email">Email</label>
+                  <label for="email" data-i18n="form_email">Email</label>
                   <input
                     type="email"
                     id="email"
@@ -387,7 +426,7 @@
                 </div>
               </div>
               <div class="form-group">
-                <label for="phone">Phone</label>
+                <label for="phone" data-i18n="form_phone">Phone</label>
                 <input
                   type="tel"
                   id="phone"
@@ -396,7 +435,9 @@
                 />
               </div>
               <div class="form-group">
-                <label for="service">Service Needed</label>
+                <label for="service" data-i18n="form_service"
+                  >Service Needed</label
+                >
                 <input
                   type="text"
                   id="service"
@@ -405,7 +446,7 @@
                 />
               </div>
               <div class="form-group">
-                <label for="message">Message</label>
+                <label for="message" data-i18n="form_message">Message</label>
                 <textarea
                   id="message"
                   name="message"
@@ -413,7 +454,9 @@
                   required
                 ></textarea>
               </div>
-              <button type="submit" class="btn">Send Message</button>
+              <button type="submit" class="btn" data-i18n="form_button">
+                Send Message
+              </button>
             </form>
           </div>
         </div>
@@ -428,14 +471,17 @@
             <a href="#hero">Zam<span>mat</span></a>
           </div>
           <div class="footer-links">
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#staff">Our Team</a>
-            <a href="#contact">Contact</a>
+            <a href="#about" data-i18n="nav_about">About</a>
+            <a href="#services" data-i18n="nav_services">Services</a>
+            <a href="#staff" data-i18n="nav_team">Our Team</a>
+            <a href="#contact" data-i18n="nav_contact">Contact</a>
           </div>
         </div>
         <div class="copyright">
-          <p>&copy; 2025 Zammat. All Rights Reserved.</p>
+          <p>
+            &copy; 2025 Zammat.
+            <span data-i18n="footer_rights">All Rights Reserved.</span>
+          </p>
         </div>
       </div>
     </footer>
